@@ -26,7 +26,7 @@ if (!file.exists(localFile)) {
     unzip(localFile)
 }
 
-## ------- Read raw data, merge them into one with activity and parameters names  --------
+## ------- Read raw data, merge them into one file with activity and parameters names ----
 ## NOTE: Goal 1, 3 and 4 are completed in this part of codes
 
 # --- Read 8 source data from local drive

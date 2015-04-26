@@ -18,12 +18,19 @@ One of the most exciting areas in all of data science right now is wearable comp
 * Download R package `dplyr`.
 * Use `setwd` to set the working directory to the source file location. 
 
+## Source File Descriptions
+* File "features.txt" contains the measurement parameter names.
+* File "activity_labels.txt" contains the activity id (1 to 6) and the corresponding activity names.
+* Files "subject_train.txt" and "subject_test.txt" contain testing and training subjects for each measurements. The subjects here are the participants ID.
+* Files "X_train.txt" and "X_test.txt" contain the testing and training data set. These are the actual measurement data.
+* Files "y_train.txt" and "y_test.txt" contain the activity code.
+
 ## Script Summary
 1. The script download and Unzip the source data file form above url.
 2. It read raw data files, merge them into one big data frame. 
-3. Add parameters names to the column names of all measurements. Convert activity codes to activity names.
+3. Add parameters names to the column names of all measurements. Convert activity codes to activity names. (NOTE: goals 1, 3 and 4 from the project requirements are all accomplished here.)
 4. Extracts only the mean and standard deviation value for each measurement.
-5. Create a new data set with the average of each variable, activity and subject.
+5. Create a new data set with the average of each variable, activity and subject. The column names are cleaned by removing the "()". Also, "BodyBody" is changed to "Body" to make the column names more concise.
 
 ## Output
-The script writes a comma-delimited file "tidy_data.txt" to the working directory. This is a tidy and clean summary of the raw data set. For more information about the codes and output file, please refer to the [CodeBook.md](CodeBook.md) file. 
+The script writes a comma-delimited file `"tidy_data.txt"` to the working directory. This is a tidy and clean summary of the raw data set. For more information about the codes and output file, please refer to the [CodeBook.md](CodeBook.md) file. 
